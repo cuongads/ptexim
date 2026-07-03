@@ -1,0 +1,793 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>PTEXIM Private Label Solutions · A4 Premium Magazine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root{--green:#075b42;--green2:#0b7a58;--ink:#17231d;--muted:#66736b;--paper:#fbfaf4;--cream:#f1eadf;--line:#d7ded3;--gold:#b78954;--dark:#071b14;--shadow:0 28px 80px rgba(16,26,20,.22)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#d7d3c8;color:var(--ink);font-family:Inter,Arial,Helvetica,sans-serif}.wrap{max-width:1180px;margin:auto;padding:28px 18px 80px}.toolbar{position:sticky;top:14px;z-index:50;margin:0 auto 28px;max-width:900px;border:1px solid rgba(255,255,255,.55);background:rgba(251,250,244,.86);backdrop-filter:blur(18px);border-radius:999px;padding:12px 18px;display:flex;justify-content:space-between;font-size:12px;color:var(--muted);box-shadow:0 12px 35px rgba(0,0,0,.08)}.toolbar b{letter-spacing:.16em;color:var(--green)}
+.page{width:210mm;height:297mm;margin:0 auto 36px;background:var(--paper);position:relative;overflow:hidden;box-shadow:var(--shadow)}.inner{position:absolute;inset:22mm 20mm;z-index:5}.num{position:absolute;top:15mm;right:18mm;z-index:10;font-size:9px;color:rgba(255,255,255,.7)}.light .num{color:rgba(23,35,29,.45)}.brand{font-size:15px;font-weight:900;letter-spacing:.12em;color:var(--green)}.eyebrow{display:flex;align-items:center;gap:16px;white-space:nowrap;font-size:9px;letter-spacing:.24em;text-transform:uppercase;font-weight:900;color:var(--green)}.eyebrow:after{content:"";height:1px;background:rgba(7,91,66,.20);flex:1}.dark .eyebrow{color:#fff}.dark .eyebrow:after{background:rgba(255,255,255,.28)}
+.h1,.h2,.h3,.quote{font-family:Georgia,'Times New Roman',serif;font-weight:500;letter-spacing:-.055em;margin:0}.h1{font-size:72px;line-height:.91}.h2{font-size:52px;line-height:.94}.h3{font-size:31px;line-height:1.02}.quote{font-size:42px;line-height:.98;color:var(--green)}.lead{font-size:14px;line-height:1.65;color:#3e4c44;margin:18px 0 0;max-width:720px}.body{font-size:12px;line-height:1.65;color:#48574e}.micro{font-size:9.5px;line-height:1.55;color:#6a756e}.dark{color:white}.dark .lead,.dark .body,.dark .micro{color:rgba(255,255,255,.86)}.bg{position:absolute;inset:0;background-size:cover;background-position:center}.shade:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,27,20,.18),rgba(6,27,20,.68))}.shadeLeft:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,25,18,.78) 0%,rgba(5,25,18,.48) 44%,rgba(5,25,18,.08) 100%)}.shadeBottom:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,25,18,.06),rgba(5,25,18,.12) 45%,rgba(5,25,18,.82) 100%)}
+.icon{width:27px;height:27px;display:inline-flex;color:var(--green);flex:0 0 auto}.icon svg{width:100%;height:100%;stroke:currentColor;stroke-width:1.65;fill:none;stroke-linecap:round;stroke-linejoin:round}.dark .icon,.icon.light{color:#fff}.rule{height:1px;background:var(--line)}.chip{display:inline-flex;align-items:center;border:1px solid rgba(7,91,66,.22);border-radius:999px;padding:8px 13px;color:var(--green);font-size:10px;font-weight:800;background:rgba(255,255,255,.72)}
+.cover .bg{background-image:url('assets/cover.jpg')}.cover .inner{display:flex;flex-direction:column;justify-content:flex-end}.cover .brand{position:absolute;top:22mm;left:20mm;color:#fff}.cover .h1{max-width:760px;color:white}.cover .lead{color:rgba(255,255,255,.88);max-width:520px}.cover .kicker{font-size:10px;letter-spacing:.25em;text-transform:uppercase;font-weight:900;color:rgba(255,255,255,.9);display:flex;gap:16px;align-items:center;margin-bottom:12px}.cover .kicker:after{content:"";height:1px;background:rgba(255,255,255,.35);flex:1}.cover .label{position:absolute;right:20mm;bottom:24mm;border:1px solid rgba(255,255,255,.35);padding:14px 18px;border-radius:999px;color:white;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:900}
+.aboutGrid{display:grid;grid-template-columns:1fr 1fr;gap:28px;position:absolute;left:20mm;right:20mm;bottom:22mm}.photoPanel{height:112mm;background:url('assets/private.jpg') center/cover;border-radius:34px;overflow:hidden}.bigStats{display:grid;grid-template-columns:1fr 1fr;gap:16px}.bigStat{border-top:1px solid var(--line);padding-top:16px}.bigStat strong{font-family:Georgia,serif;font-size:44px;line-height:1;color:var(--green);font-weight:500}.bigStat span{display:block;margin-top:7px;font-size:11px;line-height:1.45;color:#536057}.ceoPage{background:#fbfaf4}.ceoPhoto{position:absolute;left:20mm;top:22mm;bottom:22mm;width:76mm;background:url('assets/ceo.jpg') center top/cover;border-radius:0;box-shadow:0 22px 55px rgba(17,31,23,.14)}.ceoPhoto:after{content:"";position:absolute;left:0;right:0;bottom:0;height:34%;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.28))}.ceoPanel{position:absolute;left:112mm;right:22mm;top:24mm;bottom:24mm;display:flex;flex-direction:column}.ceoPanel .eyebrow{margin-bottom:28mm}.ceoPanel .quote{font-size:45px;line-height:.98;max-width:100%;color:var(--green)}.ceoBody{margin-top:18mm;max-width:100%;font-size:13px;line-height:1.72}.signature{margin-top:auto;border-top:1px solid rgba(7,91,66,.24);padding-top:15px}.signature b{font-family:Georgia,serif;font-size:30px;color:var(--green);font-weight:500}.signature span{display:block;margin-top:6px;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--green);font-weight:900}.pull{position:absolute;left:20mm;bottom:24mm;width:76mm;color:#fff;font-family:Georgia,serif;font-size:22px;line-height:1.1;z-index:3;padding:0 10mm 0 8mm}
+.choose .bg{background-image:url('assets/applications.jpg');background-size:cover;background-position:center}.choose .bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,28,20,.82),rgba(6,28,20,.58) 48%,rgba(6,28,20,.18))}.chooseList{position:absolute;left:20mm;bottom:32mm;width:115mm;display:grid;gap:16px}.chooseItem{display:grid;grid-template-columns:34px 1fr;align-items:center;gap:16px;padding:14px 0;border-top:1px solid rgba(255,255,255,.28);font-size:18px;font-weight:800;color:#fff}.farm .bg{background-image:url('assets/sustain.jpg')}.farmFlow{position:absolute;left:20mm;right:20mm;bottom:26mm;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.flowItem{background:rgba(251,250,244,.92);border-radius:22px;padding:14px 12px;min-height:31mm;border:1px solid rgba(255,255,255,.6)}.flowItem b{font-size:12px;color:var(--green)}.flowItem p{margin:6px 0 0;font-size:9.5px;line-height:1.35;color:#5d6861}.certStrip{display:flex;gap:8px;margin-top:24px}.cert{font-size:10px;font-weight:900;color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:8px 12px;background:rgba(255,255,255,.08)}
+.productHero{position:absolute;right:0;top:0;width:38%;height:100%;background:url('assets/innovation.jpg') center/cover}.productHero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(251,250,244,.96),rgba(251,250,244,.38) 40%,rgba(251,250,244,.05))}.innovationGrid{position:absolute;left:20mm;right:88mm;bottom:22mm;display:grid;grid-template-columns:1fr 1fr;gap:12px}.infoCard{border-top:1px solid var(--line);padding-top:12px;display:grid;grid-template-columns:32px 1fr;gap:12px;min-height:32mm}.infoCard b{font-size:13px;line-height:1.2;color:var(--green)}.infoCard p{margin:6px 0 0;font-size:10.5px;line-height:1.42;color:#556159}.wideCard{grid-column:1/3;min-height:auto}
+.app .bg{background-image:url('assets/applications.jpg')}.appGrid{position:absolute;left:20mm;right:20mm;bottom:34mm;display:grid;grid-template-columns:repeat(7,1fr);gap:8px}.appItem{min-height:46mm;border:1px solid rgba(255,255,255,.28);border-radius:24px;background:rgba(6,32,23,.34);backdrop-filter:blur(10px);padding:13px 10px;display:flex;flex-direction:column;justify-content:space-between}.appItem b{font-size:11px;line-height:1.25;color:#fff}.statement{position:absolute;left:20mm;right:20mm;bottom:18mm;background:rgba(7,91,66,.92);border-radius:22px;padding:16px 18px;font-family:Georgia,serif;font-size:19px;line-height:1.23;color:white}
+.lab .bg{background-image:url('assets/lab.jpg')}.labContent{position:absolute;left:20mm;right:20mm;bottom:24mm;display:grid;grid-template-columns:1fr 1fr;gap:28px}.capList,.machineList{display:grid;gap:0}.capRow{display:grid;grid-template-columns:32px 1fr;gap:12px;align-items:center;border-top:1px solid rgba(255,255,255,.28);padding:13px 0;color:#fff;font-size:13px}.machine{border-top:1px solid rgba(255,255,255,.34);padding:14px 0;color:#fff}.machine b{display:block;font-size:15px}.machine span{font-size:10px;color:rgba(255,255,255,.72)}
+.mapArea{position:absolute;left:20mm;right:20mm;bottom:24mm;top:92mm}.mapArea svg{width:100%;height:100%}.continent{fill:#075b42}.pin{fill:#fff;stroke:#075b42;stroke-width:2}.route{stroke:#a7b9ad;stroke-width:1.3;fill:none;stroke-dasharray:4 6}.reg{position:absolute;background:#fff;border:1px solid #d8e1d8;border-radius:20px;padding:12px 14px;box-shadow:0 18px 45px rgba(15,35,25,.08)}.reg b{display:block;color:var(--green);font-size:14px}.reg span{font-size:10px;color:#48574e}.r-usa{left:6%;top:10%}.r-eu{left:48%;top:3%}.r-can{left:12%;bottom:6%}.r-me{right:4%;bottom:10%}
+.sustain .bg{background-image:url('assets/sustain.jpg')}.pillars{position:absolute;left:20mm;right:20mm;bottom:25mm;display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.pillar{border-top:2px solid rgba(255,255,255,.65);padding-top:13px}.pillar b{display:block;font-size:15px;color:#fff}.pillar p{font-size:10px;line-height:1.4;color:rgba(255,255,255,.76)}.matrix{position:absolute;left:20mm;right:20mm;bottom:25mm;border-top:1px solid var(--line)}.mrow{display:grid;grid-template-columns:1.5fr 1fr;border-bottom:1px solid var(--line);padding:18px 0;align-items:center}.mrow b{font-size:19px;color:var(--ink)}.mrow span{justify-self:end;color:var(--green);font-weight:900;border:1px solid rgba(7,91,66,.22);padding:9px 16px;border-radius:999px}.pack .bg{background-image:url('assets/packaging.jpg')}.packLine{position:absolute;left:20mm;right:20mm;bottom:31mm;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.packCard{background:rgba(4,30,22,.50);border:1px solid rgba(255,255,255,.28);border-radius:28px;padding:16px;min-height:48mm;backdrop-filter:blur(10px)}.packCard b{display:block;margin-top:14px;color:#fff;font-size:15px}.packCard p{font-size:10px;line-height:1.4;color:rgba(255,255,255,.78)}.process{position:absolute;left:25mm;right:25mm;bottom:38mm;display:grid;grid-template-columns:repeat(8,1fr);gap:0;align-items:start}.process:before{content:"";position:absolute;left:5%;right:5%;top:18px;height:1px;background:var(--line)}.step{text-align:center;position:relative}.dot{width:37px;height:37px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-weight:900;margin:0 auto 15px;position:relative;z-index:1}.step b{display:block;color:var(--green);font-size:13px}.step p{font-size:9px;line-height:1.35;color:#5c6860;margin:6px 4px 0}.privateProducts{display:none}
+.risk .bg{background-image:url('assets/risk.jpg')}.riskGrid{position:absolute;left:20mm;right:20mm;bottom:25mm;display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.riskCard{min-height:46mm;border-top:2px solid rgba(255,255,255,.62);padding-top:13px}.riskCard b{font-size:14px;line-height:1.2;color:#fff}.conf .bg{background-image:url('assets/confidential.jpg')}.secureGrid{position:absolute;left:20mm;right:20mm;bottom:29mm;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.secure{border:1px solid rgba(255,255,255,.30);background:rgba(5,26,18,.42);backdrop-filter:blur(10px);border-radius:25px;padding:16px;min-height:45mm}.secure b{display:block;color:#fff;font-size:15px;margin-top:14px}.secure span{font-size:10px;color:rgba(255,255,255,.75)}.stats{position:absolute;left:20mm;right:20mm;top:110mm;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.stat{border-top:1px solid var(--line);padding-top:18px}.stat strong{font-family:Georgia,serif;font-size:54px;font-weight:500;color:var(--green);letter-spacing:-.06em}.stat span{display:block;margin-top:10px;font-size:11px;line-height:1.45;color:#4f5c54}.successText{position:absolute;left:20mm;right:20mm;bottom:24mm;display:grid;grid-template-columns:1fr 1.2fr;gap:30px}.successText b{font-family:Georgia,serif;font-size:27px;color:var(--green)}.diffGrid{position:absolute;left:20mm;right:20mm;top:112mm;display:grid;grid-template-columns:1fr 1fr;gap:24px 34px}.diff{display:grid;grid-template-columns:36px 1fr;gap:12px;border-top:2px solid var(--green);padding-top:14px}.diff b{font-size:15px;color:var(--green)}.diff p{font-size:10.8px;line-height:1.48;color:#556159}.callout{position:absolute;left:20mm;right:20mm;bottom:24mm;background:var(--green);color:white;border-radius:24px;padding:18px 20px;font-family:Georgia,serif;font-size:23px;line-height:1.13}.pipeline{position:absolute;left:25mm;right:25mm;bottom:32mm;display:grid;grid-template-columns:repeat(5,1fr);gap:16px}.pipe{position:relative;border-top:1px solid rgba(255,255,255,.48);padding-top:16px}.pipe:after{content:"→";position:absolute;right:-16px;top:8px;color:rgba(255,255,255,.7);font-size:22px}.pipe:last-child:after{display:none}.pipe b{display:block;font-size:16px;color:#fff}.pipe p{font-size:10px;line-height:1.38;color:rgba(255,255,255,.76)}.contact .bg{background-image:url('assets/contact.jpg')}.contact .bg:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(251,250,244,.96),rgba(251,250,244,.76) 48%,rgba(251,250,244,.12))}.qr{width:38mm;height:38mm;background:repeating-linear-gradient(90deg,var(--green) 0 3px,transparent 3px 8px),repeating-linear-gradient(0deg,var(--green) 0 3px,transparent 3px 8px);border:8px solid #fff;border-radius:18px;box-shadow:0 16px 40px rgba(0,0,0,.08)}.certs{display:flex;flex-wrap:wrap;gap:9px;margin-top:24px}.cert2{border:1px solid rgba(7,91,66,.22);padding:9px 14px;border-radius:999px;color:var(--green);font-size:10px;font-weight:900;background:rgba(255,255,255,.65)}
+@media print{body{background:#fff}.toolbar{display:none}.wrap{padding:0}.page{box-shadow:none;margin:0;page-break-after:always;width:210mm;height:297mm}@page{size:A4;margin:0}}
+
+
+/* V3 premium magazine fixes */
+.ceoPage{background:linear-gradient(90deg,#fbfaf4 0%,#fbfaf4 62%,#efe7d9 62%,#efe7d9 100%)}
+.ceoPhoto{left:auto;right:20mm;top:28mm;bottom:auto;width:74mm;height:105mm;border-radius:34px;background-position:center 18%;box-shadow:0 28px 70px rgba(20,32,24,.18);overflow:hidden}
+.ceoPhoto:after{height:48%;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.30))}
+.ceoPanel{left:20mm;right:104mm;top:28mm;bottom:26mm;display:flex;flex-direction:column}
+.ceoPanel .eyebrow{margin-bottom:20mm}
+.ceoPanel .quote{font-size:50px;line-height:.96;color:var(--green);max-width:100%}
+.ceoBody{margin-top:18mm;font-size:14px;line-height:1.72;color:#36433b}
+.ceoPanel .body:not(.ceoBody){font-size:14px;line-height:1.65;color:#36433b}
+.signature{margin-top:22mm;border-top:1px solid rgba(7,91,66,.25);padding-top:17px}
+.signature b{font-size:28px}
+.pull{left:auto;right:20mm;bottom:30mm;width:74mm;padding:0 10mm;color:#fff;font-size:21px;text-shadow:0 2px 16px rgba(0,0,0,.35)}
+
+.appGrid{left:20mm;right:20mm;bottom:58mm;grid-template-columns:repeat(4,1fr);gap:12px}
+.appItem{min-height:31mm;border-radius:22px;padding:14px 14px;background:rgba(6,32,23,.46)}
+.appItem b{font-size:13px;line-height:1.22}
+.statement{bottom:22mm;font-size:20px;line-height:1.25;padding:18px 22px;border-radius:24px}
+
+.mapArea{left:18mm;right:18mm;top:84mm;bottom:24mm;background:#fff;border-radius:34px;box-shadow:0 22px 70px rgba(17,32,23,.08);overflow:hidden}
+.mapArea .regMapImg{position:absolute;inset:0;background:url('assets/regulatory_map_reference.png') center/contain no-repeat}
+.mapArea > svg,.mapArea .reg{display:none}
+.regNote{position:absolute;left:20mm;right:20mm;bottom:14mm;display:flex;gap:10px;justify-content:center;z-index:4}
+.regNote span{background:rgba(7,91,66,.08);border:1px solid rgba(7,91,66,.18);border-radius:999px;padding:8px 12px;font-size:10px;font-weight:900;color:var(--green)}
+
+.privateProducts{display:none}
+.process{left:20mm;right:20mm;bottom:25mm;top:92mm;width:auto;display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:1fr;gap:16px}
+.process:before{display:none}
+.step{position:relative;background:#fff;border:1px solid var(--line);border-radius:26px;padding:20px 18px 18px;box-shadow:0 18px 50px rgba(17,32,23,.06);min-height:54mm;overflow:hidden}
+.step:nth-child(2),.step:nth-child(4),.step:nth-child(6),.step:nth-child(8){transform:translateY(18mm)}
+.step:after{content:"";position:absolute;right:16px;bottom:12px;width:34px;height:34px;border-radius:50%;background:rgba(7,91,66,.08)}
+.dot{position:static;width:40px;height:40px;border-radius:50%;font-size:14px;margin-bottom:18px;background:var(--green)}
+.step b{font-size:19px;line-height:1.1}
+.step p{font-size:11px;margin-top:8px;line-height:1.45;color:#5c6860}
+
+.pipeline{left:20mm;right:auto;bottom:30mm;top:92mm;width:118mm;display:grid;grid-template-columns:1fr;gap:12px}
+.pipeline:before{content:"";position:absolute;left:22px;top:18px;bottom:18px;width:1px;background:rgba(255,255,255,.38)}
+.pipe{position:relative;min-height:auto;padding:14px 16px 14px 62px;border-top:0;background:rgba(5,25,18,.50);border:1px solid rgba(255,255,255,.22);border-radius:18px;backdrop-filter:blur(10px)}
+.pipe:before{content:"";position:absolute;left:14px;top:17px;width:18px;height:18px;border-radius:50%;background:#fff;border:5px solid var(--green)}
+.pipe:after{content:"→";position:absolute;right:16px;top:50%;transform:translateY(-50%);opacity:.55;font-size:18px}
+.pipe b{font-size:18px;line-height:1.15;display:block}
+.pipe p{font-size:10.5px;line-height:1.35;margin:5px 38px 0 0}
+
+.contact .inner{inset:22mm 18mm}
+.certLogoWall{position:absolute;left:18mm;right:18mm;bottom:26mm;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.certLogo{min-height:22mm;border:1px solid rgba(7,91,66,.22);background:rgba(255,255,255,.82);border-radius:18px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--green);font-weight:900;font-size:13px;letter-spacing:.04em;padding:10px}
+.certLogo.green{background:var(--green);color:#fff;border-color:var(--green)}
+.certs{display:none}
+.qr{border-radius:24px}
+
+
+
+
+/* V4 QC fixes: magazine CEO, clean map, controlled factory image, logo wall */
+.ceoPage{background:#fbfaf4}
+.ceoFrame{position:absolute;right:22mm;top:30mm;width:72mm;z-index:4}
+.ceoFrame .ceoPhoto{position:relative;left:auto;right:auto;top:auto;bottom:auto;width:72mm;height:88mm;border-radius:30px;background:url('assets/ceo.jpg') center 22%/cover no-repeat;box-shadow:0 28px 70px rgba(20,32,24,.14);overflow:hidden}
+.ceoFrame .ceoPhoto:after{display:none}
+.ceoCaption{margin-top:12px;padding-top:12px;border-top:1px solid rgba(7,91,66,.25);font-family:Georgia,serif;font-size:22px;line-height:1.05;color:var(--green)}
+.ceoCaption span{display:block;margin-top:7px;font-family:Inter,Arial,sans-serif;font-size:8.5px;line-height:1.4;letter-spacing:.18em;text-transform:uppercase;font-weight:900;color:#526158}
+.ceoPanel{left:22mm;right:112mm;top:30mm;bottom:28mm;display:flex;flex-direction:column}
+.ceoPanel .eyebrow{margin-bottom:21mm}.ceoPanel .quote{font-size:48px;line-height:.96;color:var(--green)}.ceoBody{margin-top:18mm;font-size:14px;line-height:1.78;color:#36433b}.ceoPanel .body:not(.ceoBody){font-size:14px;line-height:1.72;color:#36433b}.signature{margin-top:auto;border-top:2px solid var(--green);padding-top:16px}.signature b{font-size:24px;line-height:1.08;color:var(--green)}.signature span{font-size:8.5px}.pull{display:none}
+.productPage{background:#fbfaf4}.productCopy{right:95mm}.productHero{display:none}.factoryPanel{position:absolute;right:20mm;top:38mm;width:72mm;height:82mm;border-radius:32px;background:url('assets/factory/bmt1.jpg') center/cover no-repeat;box-shadow:0 24px 65px rgba(20,32,24,.12);overflow:hidden}.factoryPanel:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.55))}.factoryCaption{position:absolute;left:16px;right:16px;bottom:14px;z-index:2;color:#fff;font-size:10px;line-height:1.45;font-weight:800}.innovationGrid{right:20mm;left:20mm;bottom:22mm;grid-template-columns:repeat(3,1fr);gap:12px}.infoCard{min-height:29mm;background:#fff;border:1px solid var(--line);border-radius:22px;padding:12px;box-shadow:0 12px 38px rgba(20,32,24,.05);grid-template-columns:28px 1fr}.infoCard b{font-size:12.5px}.infoCard p{font-size:9.5px}.wideCard{grid-column:1/4}
+.appGrid{left:20mm;right:20mm;top:105mm;bottom:auto;grid-template-columns:repeat(4,1fr);gap:12px}.appItem{min-height:26mm;border-radius:20px;padding:13px;background:rgba(5,28,20,.46)}.appItem b{font-size:12px;line-height:1.25}.statement{left:20mm;right:20mm;bottom:22mm;font-size:18.5px;line-height:1.25;padding:17px 20px;border-radius:23px}
+.mapArea{left:0;right:0;top:70mm;bottom:0;background:transparent;border-radius:0;box-shadow:none;overflow:hidden}.mapArea .regMapImg{position:absolute;inset:0;background:url('assets/regulatory_map_clean.jpg') center bottom/cover no-repeat}.mapArea .regNote{display:none}.mapArea:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(251,250,244,.78) 0%,rgba(251,250,244,.08) 24%,rgba(251,250,244,0) 100%);pointer-events:none}
+.process{left:30mm;right:30mm;top:88mm;bottom:24mm;display:block}.process:before{display:block;content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--line)}.step{position:absolute;width:42%;min-height:auto;border-radius:22px;padding:14px 16px;background:#fff;border:1px solid var(--line);box-shadow:0 14px 40px rgba(20,32,24,.055);transform:none!important;text-align:left}.step:nth-child(odd){left:0}.step:nth-child(even){right:0}.step:nth-child(1){top:0}.step:nth-child(2){top:18mm}.step:nth-child(3){top:36mm}.step:nth-child(4){top:54mm}.step:nth-child(5){top:72mm}.step:nth-child(6){top:90mm}.step:nth-child(7){top:108mm}.step:nth-child(8){top:126mm}.step:after{display:none}.dot{position:absolute;top:13px;width:29px;height:29px;font-size:11px;margin:0}.step:nth-child(odd) .dot{right:-48px}.step:nth-child(even) .dot{left:-48px}.step b{display:block;margin-left:0;font-size:15px;line-height:1.15}.step p{font-size:9.6px;margin:6px 0 0;line-height:1.35}
+.riskGrid{left:20mm;right:20mm;bottom:28mm;grid-template-columns:repeat(5,1fr);gap:14px}.riskCard{min-height:38mm;border-top:2px solid rgba(255,255,255,.65);padding-top:15px;display:flex;flex-direction:column;align-items:flex-start;gap:12px}.riskCard .icon{width:30px;height:30px}.riskCard b{font-size:14px;line-height:1.28;color:#fff;display:block;max-width:100%}
+.pipeline{left:20mm;right:20mm;top:104mm;bottom:auto;width:auto;display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.pipeline:before{display:none}.pipe{padding:15px 14px;border-radius:20px;background:rgba(5,25,18,.54);min-height:44mm}.pipe:before{display:none}.pipe:after{right:-11px;top:20px;transform:none;font-size:20px}.pipe b{font-size:15px;line-height:1.15}.pipe p{font-size:9.5px;line-height:1.35;margin:8px 0 0;color:rgba(255,255,255,.78)}
+.contact .inner{inset:22mm 20mm}.certLogoWall.logoWall{position:absolute;left:20mm;right:20mm;bottom:24mm;display:grid;grid-template-columns:repeat(6,1fr);gap:14px 18px;align-items:center}.logoCell{height:23mm;display:flex;align-items:center;justify-content:center;padding:8px;background:rgba(255,255,255,.55);border:1px solid rgba(7,91,66,.10);border-radius:0}.logoCell img{max-width:100%;max-height:18mm;object-fit:contain;filter:grayscale(.05)}.darkLogo{background:#0b5a42}.contact .lead{max-width:520px}.qr{width:34mm;height:34mm;border-radius:14px}
+
+
+
+
+/* V5 layout refinement after QC feedback */
+.regulatoryPage{background:#fbfaf4}.creativeMap{position:absolute;left:8mm;right:8mm;top:84mm;bottom:22mm;overflow:visible}.creativeMap img{position:absolute;inset:8mm 0 0 0;width:100%;height:78%;object-fit:contain;opacity:.98}.marketCard{position:absolute;z-index:5;min-width:45mm;background:rgba(255,255,255,.92);border:1px solid rgba(7,91,66,.18);border-radius:20px;padding:13px 15px;box-shadow:0 16px 44px rgba(17,32,23,.08)}.marketCard b{display:block;color:var(--green);font-size:16px;margin-bottom:5px}.marketCard span{font-size:11px;color:#33443a;font-weight:700}.marketCard.usa{left:13mm;top:49mm}.marketCard.canada{left:31mm;bottom:8mm}.marketCard.eu{left:93mm;top:10mm}.marketCard.me{right:15mm;top:73mm}
+.processPage{background:linear-gradient(180deg,#fbfaf4,#f4efe6)}.processRibbon{position:absolute;left:20mm;right:20mm;top:104mm;bottom:46mm;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,1fr);gap:18px 16px}.ribbonLine{position:absolute;left:8%;right:8%;top:50%;height:1px;background:rgba(7,91,66,.22);z-index:0}.pStep{position:relative;background:rgba(255,255,255,.82);border:1px solid rgba(7,91,66,.12);border-radius:28px;padding:22px 20px;box-shadow:0 22px 60px rgba(17,32,23,.07);z-index:2;display:flex;flex-direction:column;justify-content:flex-start}.pStep:nth-child(3),.pStep:nth-child(5),.pStep:nth-child(7),.pStep:nth-child(9){transform:translateY(16mm)}.pStep em{font-style:normal;color:var(--gold);font-size:13px;font-weight:900;letter-spacing:.12em}.pStep b{margin-top:17px;color:var(--green);font-size:22px;line-height:1.05}.pStep p{font-size:12px;line-height:1.45;color:#536057;margin:8px 0 0}.processFooter{position:absolute;left:20mm;right:20mm;bottom:24mm;display:grid;grid-template-columns:repeat(8,1fr);gap:4px;border-top:1px solid var(--line);padding-top:14px}.processFooter span{font-size:9px;text-transform:uppercase;letter-spacing:.12em;color:var(--green);font-weight:900;text-align:center}
+.innovationPage .bg{background-position:center}.pipelineSpacious{position:absolute;left:20mm;right:20mm;bottom:32mm;display:grid;grid-template-columns:repeat(5,1fr);gap:20px}.pipeNode{min-height:66mm;background:rgba(5,25,18,.56);border:1px solid rgba(255,255,255,.24);border-radius:30px;padding:20px 18px;backdrop-filter:blur(12px);box-shadow:0 20px 60px rgba(0,0,0,.13)}.pipeNode span{display:inline-flex;width:30px;height:30px;border-radius:50%;align-items:center;justify-content:center;background:#fff;color:var(--green);font-size:11px;font-weight:900;margin-bottom:18px}.pipeNode b{display:block;color:#fff;font-size:22px;line-height:1.08}.pipeNode p{font-size:12px;line-height:1.48;color:rgba(255,255,255,.76);margin-top:12px}
+.contact .bg{background-image:url('assets/contact-page.png');background-position:center bottom;background-size:cover}.contact .bg:after{background:linear-gradient(90deg,rgba(251,250,244,.97),rgba(251,250,244,.88) 45%,rgba(251,250,244,.25))}.contactBlock{display:flex;gap:22px;align-items:center;margin-top:26mm;max-width:560px}.contactBlock b{font-family:Georgia,serif;color:var(--green);font-size:26px}.contactBlock .body{margin:.25rem 0 0;max-width:380px}.certCircleWall{position:absolute;left:20mm;right:20mm;bottom:22mm;display:flex;flex-wrap:wrap;gap:14px;align-items:center}.logoCircle{width:25mm;height:25mm;border-radius:50%;background:rgba(255,255,255,.88);border:1px solid rgba(7,91,66,.14);box-shadow:0 12px 34px rgba(17,32,23,.06);display:flex;align-items:center;justify-content:center;padding:5mm}.logoCircle img{max-width:100%;max-height:100%;object-fit:contain}.logoCircle.darkLogo{background:#fff}.logoCircle.darkLogo img{filter:none}.contact .qr{width:34mm;height:34mm;border-radius:18px;flex:0 0 auto}
+
+
+/* V6 precision QC fixes */
+.ceoQuote{position:relative;margin-top:0;color:var(--green);max-width:100%;padding:20px 0 18px;border-top:1px solid rgba(7,91,66,.18);border-bottom:1px solid rgba(7,91,66,.18)}
+.ceoQuote .quoteMark{display:block;font-family:Georgia,'Times New Roman',serif;font-size:58px;line-height:.62;color:rgba(7,91,66,.42);font-weight:500;letter-spacing:-.06em}
+.ceoQuote .quoteLine{display:block;font-family:Georgia,'Times New Roman',serif;font-size:42px;line-height:1.02;letter-spacing:-.055em;font-weight:500;margin:2px 0 8px;color:var(--green)}
+.ceoQuote .quoteBottom{text-align:right;margin-top:2px}
+
+/* Page 09 — editorial global map, no white block underneath */
+.regulatoryPage{background:linear-gradient(180deg,#fbfaf4 0%,#f7f4eb 34%,#0b3e2f 34%,#08291f 100%)}
+.regulatoryPage .inner{inset:22mm 20mm auto 20mm;height:58mm}
+.regulatoryPage .lead{max-width:650px}
+.creativeMap{position:absolute;left:0;right:0;top:92mm;bottom:0;overflow:hidden;background:radial-gradient(circle at 50% 42%,rgba(255,255,255,.11),rgba(255,255,255,0) 42%),linear-gradient(135deg,#0d6046,#071d16)}
+.creativeMap:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(251,250,244,.07),rgba(0,0,0,.12));z-index:2;pointer-events:none}
+.creativeMap:after{content:"GLOBAL MARKET READINESS";position:absolute;left:20mm;bottom:15mm;z-index:4;color:rgba(255,255,255,.20);font-size:10px;letter-spacing:.34em;font-weight:900}
+.creativeMap img{position:absolute;left:50%;top:47%;width:116%;height:auto;transform:translate(-50%,-50%);object-fit:contain;opacity:.82;filter:contrast(1.08) saturate(.82) brightness(.92);mix-blend-mode:screen;z-index:1}
+.marketCard{position:absolute;z-index:5;min-width:42mm;background:rgba(251,250,244,.93);border:1px solid rgba(255,255,255,.34);border-radius:18px;padding:12px 14px;box-shadow:0 18px 48px rgba(0,0,0,.18)}
+.marketCard b{font-size:15px;color:var(--green);margin-bottom:4px}.marketCard span{font-size:10.5px;color:#31443a;font-weight:800}.marketCard.usa{left:18mm;top:30mm}.marketCard.canada{left:38mm;bottom:24mm}.marketCard.eu{left:91mm;top:14mm}.marketCard.me{right:18mm;top:68mm}
+
+/* Page 13 — remove collision line and build a cleaner modular process */
+.processPage{background:#fbfaf4}
+.processRibbon{position:absolute;left:20mm;right:20mm;top:104mm;bottom:48mm;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,1fr);gap:18px 18px}
+.processRibbon .ribbonLine{display:none}
+.pStep{transform:none!important;border-radius:24px;padding:18px 18px;background:rgba(255,255,255,.92);border:1px solid rgba(7,91,66,.14);box-shadow:0 18px 44px rgba(17,32,23,.055)}
+.pStep em{font-size:12px;color:var(--gold);letter-spacing:.14em}.pStep b{font-size:20px;margin-top:14px}.pStep p{font-size:11px;line-height:1.42;margin-top:8px}.processFooter{bottom:26mm;border-top:1px solid rgba(7,91,66,.18)}
+
+/* Page 18 — more spacious pipeline, no cramped shapes */
+.innovationPage .bg{background-position:center;background-size:cover}
+.pipelineSpacious{position:absolute;left:20mm;right:20mm;bottom:34mm;display:grid;grid-template-columns:repeat(5,1fr);gap:18px;align-items:stretch}
+.pipeNode{min-height:56mm;border-radius:24px;padding:17px 15px;background:rgba(6,28,20,.48);border:1px solid rgba(255,255,255,.20);backdrop-filter:blur(9px)}
+.pipeNode span{width:28px;height:28px;margin-bottom:14px}.pipeNode b{font-size:19px;line-height:1.08}.pipeNode p{font-size:10.5px;line-height:1.42;margin-top:10px}
+
+/* Page 19 — image on top, clean white contact/certification area below */
+.contact{background:#fbfaf4}.contact .bg{position:absolute;left:0;right:0;top:0;height:148mm;bottom:auto;background-image:url('assets/contact-page.png');background-position:center center;background-size:cover}.contact .bg:after{display:none!important}.contact .inner{position:absolute;left:20mm;right:20mm;top:158mm;bottom:auto;z-index:5}.contact .brand{margin-bottom:8mm!important}.contact .eyebrow{color:var(--green)}.contact .h1{font-size:48px;line-height:.96;max-width:720px!important;margin-top:14px!important}.contact .lead{font-size:13px;margin-top:12px;max-width:460px}.contactBlock{margin-top:12mm;gap:18px}.contactBlock b{font-size:22px}.contactBlock .body{font-size:11.5px;max-width:420px}.contact .qr{width:28mm;height:28mm;border-radius:14px;border-width:6px}.certCircleWall{position:absolute;left:20mm;right:20mm;bottom:18mm;display:grid!important;grid-template-columns:repeat(6,1fr);gap:9px 12px;align-items:center;z-index:6}.logoCircle{width:20mm;height:20mm;border-radius:50%;padding:4.2mm;background:#fff;border:1px solid rgba(7,91,66,.13);box-shadow:0 8px 22px rgba(17,32,23,.055)}.logoCircle img{max-width:100%;max-height:100%;object-fit:contain}.logoCircle.darkLogo{background:#fff}
+
+
+
+/* === V7 final QC refinements: pages 09, 13, 18, 19 === */
+/* Page 09 — full editorial map, no cropped Canada, no white image base */
+.regulatoryPage{background:linear-gradient(180deg,#fbfaf4 0%,#eef4ef 52%,#082116 52%,#082116 100%)!important;color:var(--ink)}
+.regulatoryPage .inner{inset:22mm 20mm auto 20mm;height:68mm;z-index:8}.regulatoryPage .h2{font-size:54px;line-height:.95}.regulatoryPage .lead{max-width:780px;font-size:14px;line-height:1.58}
+.creativeMap{position:absolute!important;left:0!important;right:0!important;top:78mm!important;bottom:0!important;overflow:hidden!important;background:radial-gradient(circle at 56% 40%,rgba(43,137,93,.36),rgba(8,33,22,0) 42%),linear-gradient(135deg,#0b5d43 0%,#092419 46%,#061913 100%)!important}
+.creativeMap:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(251,250,244,.18),rgba(251,250,244,0) 20%,rgba(0,0,0,.18) 100%);z-index:2;pointer-events:none}.creativeMap:after{content:"GLOBAL REGULATORY READINESS";position:absolute;right:18mm;bottom:16mm;z-index:5;color:rgba(255,255,255,.18);font-size:10px;letter-spacing:.34em;font-weight:900}
+.creativeMap img{position:absolute!important;left:50%!important;top:48%!important;width:92%!important;height:auto!important;transform:translate(-50%,-50%)!important;object-fit:contain!important;opacity:.90!important;filter:brightness(1.18) contrast(1.02) saturate(.72)!important;mix-blend-mode:screen!important;z-index:1!important}
+.marketCard{position:absolute!important;z-index:6!important;min-width:42mm!important;background:rgba(251,250,244,.94)!important;border:1px solid rgba(255,255,255,.55)!important;border-radius:20px!important;padding:13px 15px!important;box-shadow:0 18px 50px rgba(0,0,0,.22)!important}.marketCard b{font-size:15px!important;color:var(--green)!important;margin-bottom:5px!important}.marketCard span{font-size:10.5px!important;color:#2f4238!important;font-weight:800!important}.marketCard.usa{left:18mm!important;top:44mm!important}.marketCard.canada{left:25mm!important;top:88mm!important;bottom:auto!important}.marketCard.eu{left:96mm!important;top:28mm!important}.marketCard.me{right:18mm!important;top:92mm!important}
+/* Page 13 — editorial process without sticky shapes or broken lines */
+.processPage{background:linear-gradient(180deg,#fbfaf4 0%,#fbfaf4 58%,#efe7db 58%,#efe7db 100%)!important}.processMagazine{position:absolute;left:20mm;right:20mm;top:103mm;bottom:24mm;display:grid;grid-template-columns:64mm 1fr;gap:26mm;align-items:stretch}.processLead{border-top:2px solid var(--green);padding-top:18px;display:flex;flex-direction:column;justify-content:space-between}.processLead span{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--green);font-weight:900}.processLead b{font-family:Georgia,'Times New Roman',serif;font-size:42px;line-height:.96;letter-spacing:-.055em;color:var(--green);font-weight:500}.processColumn{display:grid;grid-template-columns:1fr 1fr;gap:10px 18px}.processStep{background:rgba(255,255,255,.76);border-top:1px solid rgba(7,91,66,.24);padding:13px 0 10px;display:grid;grid-template-columns:28px 1fr;column-gap:12px;align-content:start;min-height:26mm}.processStep em{grid-row:1/3;font-style:normal;display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:var(--green);color:#fff;font-size:10px;font-weight:900}.processStep b{font-size:17px;line-height:1.08;color:var(--green)}.processStep p{margin:5px 0 0;font-size:10.3px;line-height:1.35;color:#5a685f}.processRibbon,.processFooter{display:none!important}
+/* Page 18 — horizontal bars, clear spacing */
+.innovationPage .inner{inset:22mm 20mm auto 20mm;height:80mm}.innovationPage .bg{background-position:center!important}.pipelineBars{position:absolute;left:20mm;right:20mm;bottom:30mm;display:grid;gap:10px;z-index:6}.barStep{display:grid;grid-template-columns:34mm 1fr;align-items:center;min-height:24mm;padding:10px 16px;background:rgba(5,25,18,.58);border:1px solid rgba(255,255,255,.22);border-radius:18px;backdrop-filter:blur(12px);box-shadow:0 16px 50px rgba(0,0,0,.14)}.barStep em{font-style:normal;width:28px;height:28px;border-radius:50%;background:#fff;color:var(--green);font-weight:900;font-size:10px;display:flex;align-items:center;justify-content:center}.barStep b{display:block;color:#fff;font-size:22px;line-height:1.05}.barStep p{margin:4px 0 0;color:rgba(255,255,255,.76);font-size:11.3px;line-height:1.42}.pipelineSpacious{display:none!important}
+/* Page 19 — stable top image, white working area, compact logos 6 x 2 */
+.contact{background:#fbfaf4!important;overflow:hidden}.contact .bg{position:absolute!important;left:0!important;right:0!important;top:0!important;height:132mm!important;bottom:auto!important;background-image:url('assets/contact-page.png')!important;background-position:center 62%!important;background-size:cover!important}.contact .bg:after{display:none!important}.contact .inner{position:absolute!important;left:20mm!important;right:20mm!important;top:142mm!important;bottom:auto!important;z-index:8!important}.contact .brand{display:none!important}.contact .eyebrow{color:var(--green)}.contact .h1{font-size:44px!important;line-height:.96!important;max-width:620px!important;margin-top:14px!important;color:var(--green)!important}.contact .lead{font-size:13px!important;line-height:1.55!important;margin-top:10px!important;max-width:500px!important}.contactBlock{margin-top:10mm!important;display:grid!important;grid-template-columns:28mm 1fr!important;gap:18px!important;align-items:center!important;max-width:600px!important}.contactBlock b{font-size:22px!important;color:var(--green)!important}.contactBlock .body{font-size:11.5px!important;line-height:1.55!important;max-width:430px!important}.contact .qr{width:28mm!important;height:28mm!important;border-radius:14px!important;border-width:6px!important;box-shadow:none!important}.certCircleWall{position:absolute!important;left:20mm!important;right:20mm!important;bottom:16mm!important;display:grid!important;grid-template-columns:repeat(6,1fr)!important;gap:8px 12px!important;z-index:10!important;align-items:center!important}.logoCircle{width:18mm!important;height:18mm!important;border-radius:50%!important;padding:3.6mm!important;background:#fff!important;border:1px solid rgba(7,91,66,.12)!important;box-shadow:0 8px 18px rgba(17,32,23,.045)!important;display:flex!important;align-items:center!important;justify-content:center!important}.logoCircle img{max-width:100%!important;max-height:100%!important;object-fit:contain!important}.logoCircle.darkLogo{background:#fff!important}.logoCircle.darkLogo img{filter:none!important}
+
+
+/* PAGE 09 FINAL: use provided regulatory infographic as premium hero visual */
+.regulatoryPage.page{background:#fbfaf4!important;color:var(--ink)!important;}
+.regulatoryPage .inner{inset:20mm 20mm auto 20mm!important;height:auto!important;z-index:8!important;}
+.regulatoryPage .eyebrow{color:var(--green)!important;}
+.regulatoryPage .eyebrow:after{background:rgba(7,91,66,.18)!important;}
+.regulatoryPage .h2{font-size:50px!important;line-height:.95!important;max-width:760px!important;margin-top:22px!important;color:var(--ink)!important;}
+.regulatoryPage .lead{max-width:760px!important;font-size:13.5px!important;line-height:1.58!important;color:#415049!important;margin-top:16px!important;}
+.regulatoryHero{position:absolute;left:11mm;right:11mm;top:85mm;bottom:12mm;z-index:3;display:flex;align-items:center;justify-content:center;overflow:visible;}
+.regulatoryHero img{width:100%;height:100%;object-fit:contain;display:block;filter:none;}
+.regulatoryHero:before,.regulatoryHero:after{display:none!important;content:none!important;}
+.regulatoryPage .pageNote{position:absolute;left:20mm;right:20mm;bottom:9mm;z-index:9;text-align:center;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(7,91,66,.62);font-weight:800;}
+.regulatoryPage .creativeMap,.regulatoryPage .marketCard{display:none!important;}
+
+/* === PAGE 09 FINAL CLEAN INTEGRATION: use supplied infographic, match paper color === */
+.regulatoryPage.page{
+  background:#f8f4ef!important;
+  color:var(--ink)!important;
+}
+.regulatoryPage .inner{
+  inset:18mm 20mm auto 20mm!important;
+  height:auto!important;
+  z-index:8!important;
+}
+.regulatoryPage .eyebrow{
+  color:var(--green)!important;
+}
+.regulatoryPage .eyebrow:after{
+  background:rgba(7,91,66,.18)!important;
+}
+.regulatoryPage .h2{
+  font-size:46px!important;
+  line-height:.94!important;
+  max-width:760px!important;
+  margin-top:18px!important;
+  color:var(--ink)!important;
+}
+.regulatoryPage .lead{
+  max-width:760px!important;
+  font-size:13px!important;
+  line-height:1.55!important;
+  color:#415049!important;
+  margin-top:14px!important;
+}
+.regulatoryHero{
+  position:absolute!important;
+  left:0!important;
+  right:0!important;
+  top:66mm!important;
+  bottom:0!important;
+  z-index:3!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  overflow:hidden!important;
+  background:#f8f4ef!important;
+}
+.regulatoryHero img{
+  width:100%!important;
+  height:100%!important;
+  object-fit:contain!important;
+  display:block!important;
+  filter:none!important;
+  mix-blend-mode:normal!important;
+  background:#f8f4ef!important;
+}
+.regulatoryPage .creativeMap,
+.regulatoryPage .marketCard,
+.regulatoryPage .mapArea,
+.regulatoryPage .regNote,
+.regulatoryPage .pageNote{
+  display:none!important;
+}
+
+
+
+/* CONTACT PAGE FINAL FIX — prevent certification logos from overlapping contact block */
+.contact.page{
+    background:#fbfaf4!important;
+    overflow:hidden!important;
+}
+.contact .bg{
+    position:absolute!important;
+    left:0!important;
+    right:0!important;
+    top:0!important;
+    height:124mm!important;
+    bottom:auto!important;
+    background-image:url('assets/contact-page.png')!important;
+    background-position:center 58%!important;
+    background-size:cover!important;
+}
+.contact .bg:after{display:none!important;content:none!important;}
+.contact .inner{
+    position:absolute!important;
+    left:20mm!important;
+    right:20mm!important;
+    top:136mm!important;
+    bottom:auto!important;
+    z-index:8!important;
+}
+.contact .eyebrow{margin-bottom:0!important;color:var(--green)!important;}
+.contact .h1{
+    font-size:40px!important;
+    line-height:.98!important;
+    max-width:560px!important;
+    margin-top:12px!important;
+    color:var(--green)!important;
+}
+.contact .lead{
+    max-width:430px!important;
+    font-size:12px!important;
+    line-height:1.48!important;
+    margin-top:10px!important;
+    color:#536057!important;
+}
+.contactBlock{
+    margin-top:8mm!important;
+    display:grid!important;
+    grid-template-columns:24mm 1fr!important;
+    gap:16px!important;
+    align-items:center!important;
+    max-width:560px!important;
+}
+.contact .qr{
+    width:24mm!important;
+    height:24mm!important;
+    border-width:5px!important;
+    border-radius:12px!important;
+    box-shadow:none!important;
+}
+.contactBlock b{
+    display:block!important;
+    font-family:Georgia,'Times New Roman',serif!important;
+    font-size:21px!important;
+    line-height:1.05!important;
+    color:var(--green)!important;
+    margin-bottom:6px!important;
+}
+.contactBlock .body{
+    font-size:10.7px!important;
+    line-height:1.45!important;
+    max-width:400px!important;
+    margin:0!important;
+    color:#4d5b53!important;
+}
+.certCircleWall{
+    position:absolute!important;
+    left:20mm!important;
+    right:20mm!important;
+    bottom:12mm!important;
+    top:auto!important;
+    z-index:10!important;
+    display:grid!important;
+    grid-template-columns:repeat(6,1fr)!important;
+    gap:6mm 8mm!important;
+    align-items:center!important;
+    justify-items:center!important;
+    padding:8mm 8mm 7mm!important;
+    background:rgba(255,255,255,.78)!important;
+    border:1px solid rgba(7,91,66,.12)!important;
+    border-radius:22px!important;
+    box-shadow:0 14px 38px rgba(17,32,23,.055)!important;
+}
+.certCircleWall:before{
+    content:'TRUSTED CERTIFICATIONS';
+    grid-column:1 / -1;
+    justify-self:stretch;
+    margin-bottom:0;
+    padding-bottom:4mm;
+    border-bottom:1px solid rgba(7,91,66,.16);
+    font-size:8.5px;
+    line-height:1;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    color:var(--green);
+    font-weight:900;
+}
+.logoCircle{
+    width:15mm!important;
+    height:15mm!important;
+    min-width:15mm!important;
+    min-height:15mm!important;
+    border-radius:50%!important;
+    padding:3.1mm!important;
+    background:#fff!important;
+    border:1px solid rgba(7,91,66,.14)!important;
+    box-shadow:0 6px 16px rgba(17,32,23,.04)!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+}
+.logoCircle img{
+    max-width:100%!important;
+    max-height:100%!important;
+    object-fit:contain!important;
+}
+.logoCircle.darkLogo{background:#fff!important;}
+.logoCircle.darkLogo img{filter:none!important;}
+
+
+
+/* CONTACT PAGE V2 — final stable layout: certifications are outside the contact copy flow */
+.contact.page{background:#fbfaf4!important;overflow:hidden!important;}
+.contact .bg{position:absolute!important;left:0!important;right:0!important;top:0!important;height:126mm!important;bottom:auto!important;background-image:url('assets/contact-page.png')!important;background-position:center 58%!important;background-size:cover!important;}
+.contact .bg:after{display:none!important;content:none!important;}
+.contact .inner{position:absolute!important;left:20mm!important;right:20mm!important;top:138mm!important;bottom:auto!important;height:auto!important;z-index:8!important;}
+.contact .brand{display:none!important;}
+.contact .eyebrow{margin-bottom:0!important;color:var(--green)!important;}
+.contact .h1{font-size:38px!important;line-height:.98!important;max-width:560px!important;margin:12px 0 0!important;color:var(--green)!important;}
+.contact .lead{max-width:430px!important;font-size:11.5px!important;line-height:1.45!important;margin:9px 0 0!important;color:#536057!important;}
+.contactBlock{margin-top:7mm!important;display:grid!important;grid-template-columns:22mm 1fr!important;gap:14px!important;align-items:center!important;max-width:545px!important;}
+.contact .qr{width:22mm!important;height:22mm!important;border-width:4px!important;border-radius:11px!important;box-shadow:none!important;}
+.contactBlock b{display:block!important;font-family:Georgia,'Times New Roman',serif!important;font-size:20px!important;line-height:1.05!important;color:var(--green)!important;margin-bottom:5px!important;}
+.contactBlock .body{font-size:10.4px!important;line-height:1.42!important;max-width:380px!important;margin:0!important;color:#4d5b53!important;}
+.contact > .certCircleWall{position:absolute!important;left:20mm!important;right:20mm!important;bottom:14mm!important;top:auto!important;z-index:10!important;display:grid!important;grid-template-columns:repeat(6,1fr)!important;gap:5mm 7mm!important;align-items:center!important;justify-items:center!important;padding:7mm 8mm 6mm!important;background:rgba(255,255,255,.76)!important;border:1px solid rgba(7,91,66,.11)!important;border-radius:22px!important;box-shadow:0 12px 30px rgba(17,32,23,.045)!important;}
+.contact > .certCircleWall:before{content:'TRUSTED CERTIFICATIONS';grid-column:1 / -1;justify-self:stretch;padding-bottom:4mm;border-bottom:1px solid rgba(7,91,66,.14);font-size:8px;line-height:1;letter-spacing:.22em;text-transform:uppercase;color:var(--green);font-weight:900;}
+.contact > .certCircleWall .logoCircle{width:14mm!important;height:14mm!important;min-width:14mm!important;min-height:14mm!important;border-radius:50%!important;padding:2.8mm!important;background:#fff!important;border:1px solid rgba(7,91,66,.13)!important;box-shadow:0 5px 14px rgba(17,32,23,.035)!important;display:flex!important;align-items:center!important;justify-content:center!important;}
+.contact > .certCircleWall .logoCircle img{max-width:100%!important;max-height:100%!important;object-fit:contain!important;}
+.contact > .certCircleWall .logoCircle.darkLogo{background:#fff!important;}
+.contact > .certCircleWall .logoCircle.darkLogo img{filter:none!important;}
+
+
+
+/* === CONTACT PAGE ONLY · Final magazine layout with factory hero === */
+.contactFinal.page{
+    background:#fbfaf4!important;
+    color:var(--ink)!important;
+    overflow:hidden!important;
+}
+.contactFinal .num{
+    color:rgba(23,35,29,.42)!important;
+}
+.contactFinal .contactHero{
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    height:142mm;
+    background:url('assets/contact-factory.png') center 54%/cover no-repeat;
+    border-bottom:1px solid rgba(7,91,66,.16);
+}
+.contactFinal .contactHero:after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,0) 62%,rgba(6,30,21,.12));
+    pointer-events:none;
+}
+.contactFinal .contactContent{
+    position:absolute;
+    left:20mm;
+    right:20mm;
+    top:154mm;
+    bottom:18mm;
+    display:grid;
+    grid-template-rows:auto 1fr auto;
+    gap:12mm;
+    z-index:5;
+}
+.contactFinal .contactMain{
+    display:grid;
+    grid-template-columns:36mm 1fr 50mm;
+    gap:16mm;
+    align-items:start;
+}
+.contactFinal .qr{
+    width:31mm!important;
+    height:31mm!important;
+    border:6px solid #fff!important;
+    border-radius:14px!important;
+    box-shadow:0 10px 24px rgba(17,32,23,.08)!important;
+    flex:none!important;
+}
+.contactFinal .contactCopy{
+    padding-top:1mm;
+}
+.contactFinal .contactLabel{
+    font-size:8px;
+    letter-spacing:.24em;
+    text-transform:uppercase;
+    color:var(--green);
+    font-weight:900;
+    margin-bottom:7mm;
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+.contactFinal .contactLabel:after{
+    content:"";
+    height:1px;
+    background:rgba(7,91,66,.20);
+    flex:1;
+}
+.contactFinal .contactCopy h2{
+    font-family:Georgia,'Times New Roman',serif;
+    font-size:32px;
+    line-height:1;
+    letter-spacing:-.055em;
+    font-weight:500;
+    margin:0 0 8px;
+    color:var(--green);
+}
+.contactFinal .contactCopy p{
+    margin:0;
+    font-size:12px;
+    line-height:1.6;
+    color:#435149;
+    max-width:430px;
+}
+.contactFinal .contactMeta{
+    border-left:1px solid rgba(7,91,66,.18);
+    padding-left:10mm;
+    display:grid;
+    gap:7mm;
+    align-content:start;
+}
+.contactFinal .metaRow{
+    display:grid;
+    grid-template-columns:21mm 1fr;
+    gap:8mm;
+    align-items:start;
+    padding-bottom:7mm;
+    border-bottom:1px solid rgba(7,91,66,.12);
+}
+.contactFinal .metaRow:last-child{
+    border-bottom:0;
+    padding-bottom:0;
+}
+.contactFinal .metaRow b{
+    font-size:8px;
+    letter-spacing:.20em;
+    text-transform:uppercase;
+    color:var(--green);
+    font-weight:900;
+}
+.contactFinal .metaRow span{
+    font-size:11px;
+    line-height:1.45;
+    color:#435149;
+}
+.contactFinal .certBlock{
+    border-top:1px solid rgba(7,91,66,.18);
+    padding-top:6mm;
+}
+.contactFinal .certHead{
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:12px;
+    align-items:center;
+    margin-bottom:5mm;
+}
+.contactFinal .certHead b{
+    font-size:8px;
+    letter-spacing:.24em;
+    text-transform:uppercase;
+    color:var(--green);
+    font-weight:900;
+    white-space:nowrap;
+}
+.contactFinal .certHead span{
+    height:1px;
+    background:rgba(7,91,66,.18);
+}
+.contactFinal .certGrid{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:5mm 8mm;
+    align-items:center;
+    justify-items:center;
+}
+.contactFinal .certItem{
+    width:18mm;
+    height:18mm;
+    border-radius:50%;
+    background:#fff;
+    border:1px solid rgba(7,91,66,.12);
+    box-shadow:0 6px 16px rgba(17,32,23,.04);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:3.4mm;
+}
+.contactFinal .certItem img{
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;
+}
+.contactFinal .closingLine{
+    font-family:Georgia,'Times New Roman',serif;
+    font-size:17px;
+    line-height:1.1;
+    letter-spacing:-.035em;
+    color:var(--green);
+    text-align:center;
+    padding-top:4mm;
+    border-top:1px solid rgba(7,91,66,.12);
+}
+
+
+
+
+/* COVER FINAL — logo + eyebrow + headline only */
+.cover .brand,
+.cover .label,
+.cover .lead{
+  display:none!important;
+}
+.cover .bg:after{
+  background:linear-gradient(180deg,rgba(4,22,16,.10) 0%,rgba(4,22,16,.18) 44%,rgba(4,22,16,.78) 100%)!important;
+}
+.cover .coverLogo{
+  position:absolute;
+  top:22mm;
+  left:20mm;
+  width:58mm;
+  height:auto;
+  z-index:8;
+  display:block;
+  filter:drop-shadow(0 8px 18px rgba(0,0,0,.18));
+}
+.cover .inner{
+  inset:22mm 20mm 24mm 20mm!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:flex-end!important;
+  z-index:6!important;
+}
+.cover .kicker{
+  width:100%;
+  max-width:760px;
+  margin:0 0 12px!important;
+  font-size:10px!important;
+  letter-spacing:.26em!important;
+  text-transform:uppercase;
+  font-weight:900;
+  color:rgba(255,255,255,.92)!important;
+  display:flex!important;
+  gap:16px!important;
+  align-items:center!important;
+}
+.cover .kicker:after{
+  content:"";
+  height:1px;
+  background:rgba(255,255,255,.35);
+  flex:1;
+}
+.cover .h1{
+  max-width:760px!important;
+  color:white!important;
+  margin:0!important;
+  font-size:72px!important;
+  line-height:.91!important;
+  letter-spacing:-.055em!important;
+}
+
+
+
+/* === DEPLOYMENT STABILITY PATCH · GitHub Pages / Windows / macOS / Linux ===
+   Keep the brochure as fixed A4 pages across browsers. Do not reflow into mobile layouts,
+   because the document uses absolute magazine positioning. */
+html{
+    -webkit-text-size-adjust:100%;
+    text-size-adjust:100%;
+}
+body{
+    overflow-x:auto;
+    min-width:860px;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+.wrap{
+    width:100%;
+    min-width:calc(210mm + 36px);
+}
+.page{
+    width:210mm!important;
+    height:297mm!important;
+    min-width:210mm!important;
+    min-height:297mm!important;
+    max-width:none!important;
+    aspect-ratio:auto!important;
+    flex:none;
+    contain:layout paint style;
+    isolation:isolate;
+}
+.page img,
+.certItem img,
+.logoCircle img{
+    display:block;
+}
+.bg{
+    background-repeat:no-repeat;
+}
+.cover .label,
+.cover .lead,
+.cover .hero-note,
+.cover .hero-caption,
+.cover .hero-subtitle{
+    display:none!important;
+}
+.cover .inner{
+    z-index:6;
+}
+.coverLogo{
+    z-index:7;
+}
+@media screen and (max-width:900px){
+    .wrap{
+        max-width:none!important;
+        width:max-content!important;
+        min-width:calc(210mm + 36px)!important;
+        padding-left:18px!important;
+        padding-right:18px!important;
+    }
+    .page{
+        width:210mm!important;
+        height:297mm!important;
+        min-width:210mm!important;
+        min-height:297mm!important;
+        aspect-ratio:auto!important;
+    }
+}
+@media print{
+    html,body{
+        width:210mm;
+        min-width:0!important;
+        background:#fff!important;
+    }
+    .page{
+        width:210mm!important;
+        height:297mm!important;
+        min-width:210mm!important;
+        min-height:297mm!important;
+        box-shadow:none!important;
+        margin:0!important;
+        break-after:page;
+        page-break-after:always;
+        -webkit-print-color-adjust:exact;
+        print-color-adjust:exact;
+    }
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="i-box" viewBox="0 0 24 24"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/><path d="M12 11v10"/></symbol>
+<symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M8 14a6 6 0 1 1 8 0c-1 1-1.5 2-1.5 4h-5c0-2-.5-3-1.5-4z"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.4 8-8 9-4.6-1-8-4-8-9V6l8-3z"/><path d="M8 12l3 3 5-6"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M20 4C10 4 4 10 4 20c10 0 16-6 16-16z"/><path d="M4 20c4-6 8-9 16-16"/></symbol>
+<symbol id="i-lab" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3"/><path d="M7 16h10"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+<symbol id="i-hand" viewBox="0 0 24 24"><path d="M7 12l4 4 8-8"/><path d="M3 17c4 4 14 4 18 0"/></symbol>
+<symbol id="i-data" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="7" ry="3"/><path d="M5 5v14c0 1.7 3.1 3 7 3s7-1.3 7-3V5"/><path d="M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/></symbol>
+<symbol id="i-horeca" viewBox="0 0 24 24"><path d="M6 3v18M4 3v6a2 2 0 0 0 4 0V3M15 3v18M15 3c3 1 5 4 5 8h-5"/></symbol>
+<symbol id="i-retail" viewBox="0 0 24 24"><path d="M6 7h12l1 14H5L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></symbol>
+</defs></svg>
+<div class="wrap"><div class="toolbar"><b>PTEXIM A4 Premium Magazine</b><span>19 pages · HTML prototype</span></div>
+
+<section class="page cover dark">
+  <div class="num">01</div>
+  <div class="bg shadeBottom"></div>
+  <img class="coverLogo" src="assets/ptexim-corp-logo.png" alt="PTEXIM CORP logo">
+  <div class="inner">
+    <div class="kicker">Private Label Solutions</div>
+    <h1 class="h1">From Vietnam’s Finest Spices &amp; Herbs to Your Brand’s Success.</h1>
+  </div>
+</section>
+
+<section class="page light"><div class="num">02</div><div class="inner"><div class="eyebrow">About PTEXIM</div><h2 class="h2" style="max-width:620px;margin-top:28px">A Vietnam-based spice and herb partner built for global growth.</h2><p class="lead">Established in 2017, PTEXIM develops and supplies spices, herbs and private label solutions for international customers across retail, food service and industrial food applications.</p></div><div class="aboutGrid"><div class="photoPanel"></div><div class="bigStats"><div class="bigStat"><strong>2017</strong><span>Established with a focus on export-ready spice and herb solutions.</span></div><div class="bigStat"><strong>03 ha</strong><span>Factory area supporting manufacturing, quality and packaging operations.</span></div><div class="bigStat"><strong>$40–50M</strong><span>Annual export capability for international markets.</span></div><div class="bigStat"><strong>20+</strong><span>Countries served across key global destination markets.</span></div></div></div></section>
+
+<section class="page ceoPage light"><div class="num">03</div><div class="ceoFrame"><div class="ceoPhoto"></div><div class="ceoCaption">Nguyen Vu Hien<br><span>Chief Executive Officer · PTEXIM Corporation</span></div></div><div class="ceoPanel"><div class="eyebrow">Executive Message</div><div class="ceoQuote"><span class="quoteMark quoteTop">“</span><span class="quoteLine">Behind every great food brand is a trusted ingredient partner.</span><span class="quoteMark quoteBottom">”</span></div><p class="body ceoBody">At PTEXIM, we do more than supply spices and herbs. We partner with brands to create authentic products, inspire innovation, and deliver quality that consumers trust worldwide.</p><p class="body">Together, we are building the next generation of food brands.</p><div class="signature"><b>PTEXIM – Building Brands Through Nature’s Finest Ingredients.</b><span>Executive Message</span></div></div></section>
+
+<section class="page choose dark"><div class="num">04</div><div class="bg"></div><div class="inner"><div class="eyebrow">Why Global Brands Choose PTEXIM</div><h2 class="h2" style="max-width:650px;margin-top:26px">A trusted partner for brands that need quality, agility and global readiness.</h2></div><div class="chooseList"><div class="chooseItem"><span class="icon"><svg><use href="#i-box"/></svg></span>End-to-End Solutions</div><div class="chooseItem"><span class="icon"><svg><use href="#i-bulb"/></svg></span>Innovation Driven</div><div class="chooseItem"><span class="icon"><svg><use href="#i-globe"/></svg></span>Regulatory Expertise</div><div class="chooseItem"><span class="icon"><svg><use href="#i-shield"/></svg></span>Quality Assured</div><div class="chooseItem"><span class="icon"><svg><use href="#i-leaf"/></svg></span>Sustainable Sourcing</div></div></section>
+
+<section class="page farm dark"><div class="num">05</div><div class="bg shadeBottom"></div><div class="inner"><div class="eyebrow">From Farm to Shelf</div><h2 class="h2" style="max-width:680px;margin-top:24px">From the richness of nature to the trust of consumers.</h2><p class="lead">Every step is designed to create lasting value for our partners and their brands.</p><div class="certStrip"><span class="cert">Rainforest Alliance</span><span class="cert">UEBT</span><span class="cert">Organic</span></div></div><div class="farmFlow"><div class="flowItem"><b>Sourcing</b><p>Vietnam-origin spices, herbs and farming partnerships.</p></div><div class="flowItem"><b>Cleaning</b><p>Preparation and control before R&D and testing.</p></div><div class="flowItem"><b>R&D</b><p>Product formulation and development support.</p></div><div class="flowItem"><b>Laboratory Testing</b><p>Food safety checks across key risk categories.</p></div><div class="flowItem"><b>Manufacturing</b><p>Production planning and quality execution.</p></div><div class="flowItem"><b>Packaging</b><p>Private label and channel-ready packaging formats.</p></div><div class="flowItem"><b>Global Distribution</b><p>Export coordination for international customers.</p></div><div class="flowItem"><b>Retail Shelf</b><p>Products prepared for consumer-facing brand success.</p></div></div></section>
+
+<section class="page light productPage"><div class="num">06</div><div class="inner productCopy"><div class="eyebrow">Product Innovation Center</div><h2 class="h2" style="margin-top:25px">Product development built around future consumer trends.</h2><p class="lead">We develop products based on future consumer trends — from formulation and clean label solutions to packaging and co-creation with customers.</p></div><div class="factoryPanel"><div class="factoryCaption">Manufacturing capability, R&D orientation and market-ready product development.</div></div><div class="innovationGrid"><div class="infoCard"><span class="icon"><svg><use href="#i-bulb"/></svg></span><div><b>Custom Seasoning Blends</b><p>BBQ seasonings, meat marinades, snack seasonings, sauce premixes and regional taste profiles.</p></div></div><div class="infoCard"><span class="icon"><svg><use href="#i-leaf"/></svg></span><div><b>Functional Ingredients</b><p>Natural antioxidants, color solutions, herbs, botanicals and wellness ingredients.</p></div></div><div class="infoCard"><span class="icon"><svg><use href="#i-shield"/></svg></span><div><b>Organic & Sustainable Products</b><p>Certified organic ingredients, sustainably sourced herbs and traceable supply chains.</p></div></div><div class="infoCard"><span class="icon"><svg><use href="#i-check"/></svg></span><div><b>Clean Label Solutions</b><p>No artificial colors, no artificial flavors, no preservatives and non-GMO solutions.</p></div></div><div class="infoCard"><span class="icon"><svg><use href="#i-lab"/></svg></span><div><b>Health & Wellness Formulations</b><p>Reduced salt, reduced sugar, low sodium and plant-based solutions.</p></div></div><div class="infoCard"><span class="icon"><svg><use href="#i-box"/></svg></span><div><b>Natural Extracts & Value-Added Ingredients</b><p>Essential oils, oleoresins, botanical extracts and standardized active ingredients.</p></div></div><div class="infoCard wideCard"><span class="icon"><svg><use href="#i-hand"/></svg></span><div><b>Market Trend, Packaging Innovation & Co-Creation</b><p>Clean label, organic, plant-based, ethnic flavor, convenience food trends, recyclable packaging, eco-friendly packaging, portion packs and premium retail concepts.</p></div></div></div></section>
+
+<section class="page app dark"><div class="num">07</div><div class="bg shadeBottom"></div><div class="inner"><div class="eyebrow">Application Solutions</div><h2 class="h2" style="max-width:720px;margin-top:24px">Customized spice and herb solutions for every food category.</h2></div><div class="appGrid"><div class="appItem"><span class="icon"><svg><use href="#i-retail"/></svg></span><b>Retail & Consumer Brands</b></div><div class="appItem"><span class="icon"><svg><use href="#i-horeca"/></svg></span><b>Food Service & Horeca</b></div><div class="appItem"><span class="icon"><svg><use href="#i-shield"/></svg></span><b>Meat & Poultry Processing</b></div><div class="appItem"><span class="icon"><svg><use href="#i-box"/></svg></span><b>Snacks & Savory</b></div><div class="appItem"><span class="icon"><svg><use href="#i-check"/></svg></span><b>Instant Foods & Ready Meals</b></div><div class="appItem"><span class="icon"><svg><use href="#i-lab"/></svg></span><b>Sauces & Condiments</b></div><div class="appItem"><span class="icon"><svg><use href="#i-leaf"/></svg></span><b>Beverage & Wellness</b></div></div><div class="statement">From retail shelves to industrial food applications, PTEXIM delivers customized spice and herb solutions designed to inspire innovation and create value across every food category.</div></section>
+
+<section class="page lab dark"><div class="num">08</div><div class="bg shadeLeft"></div><div class="inner"><div class="eyebrow">Laboratory & Food Safety Excellence</div><h2 class="h2" style="max-width:700px;margin-top:24px">Laboratory capabilities for food safety excellence.</h2><p class="lead">Designed to support food safety decisions through analytical capabilities across key risk categories.</p></div><div class="labContent"><div class="capList"><div class="capRow"><span class="icon"><svg><use href="#i-lab"/></svg></span>Pesticide Residues</div><div class="capRow"><span class="icon"><svg><use href="#i-shield"/></svg></span>Mycotoxins</div><div class="capRow"><span class="icon"><svg><use href="#i-check"/></svg></span>Heavy Metals</div><div class="capRow"><span class="icon"><svg><use href="#i-data"/></svg></span>Microbiology</div><div class="capRow"><span class="icon"><svg><use href="#i-lock"/></svg></span>Allergens</div><div class="capRow"><span class="icon"><svg><use href="#i-leaf"/></svg></span>Essential Oils</div></div><div class="machineList"><div class="machine"><b>LC-MS/MS</b><span>Advanced residue screening</span></div><div class="machine"><b>GC-MS/MS</b><span>Volatile compound analysis</span></div><div class="machine"><b>ICP-MS</b><span>Trace element detection</span></div><div class="machine"><b>HPLC</b><span>Quality profile analysis</span></div></div></div></section>
+
+<section class="page light regulatoryPage"><div class="num">09</div><div class="inner"><div class="eyebrow">Global Regulatory Compliance</div><h2 class="h2">A global view of regulatory readiness.</h2><p class="lead">PTEXIM understands quality expectations across key destination markets — from food safety requirements to market-specific compliance standards.</p></div><div class="regulatoryHero"><img src="assets/regulatory_compliance_map.png" alt="PTEXIM global regulatory compliance map: USA FDA FSMA, Canada CFIA, European Union MRL EUDR, Middle East Halal"></div></section><section class="page sustain dark"><div class="num">10</div><div class="bg shadeBottom"></div><div class="inner"><div class="eyebrow">Sustainability & Responsible Sourcing</div><h2 class="h2" style="max-width:700px;margin-top:25px">Responsible sourcing built into the supply chain.</h2></div><div class="pillars"><div class="pillar"><span class="icon"><svg><use href="#i-data"/></svg></span><b>Traceability</b><p>Visibility across sourcing and product origin.</p></div><div class="pillar"><span class="icon"><svg><use href="#i-hand"/></svg></span><b>Farmer Partnership</b><p>Relationships that support long-term sourcing quality.</p></div><div class="pillar"><span class="icon"><svg><use href="#i-shield"/></svg></span><b>ESG</b><p>Responsible practices embedded in business priorities.</p></div><div class="pillar"><span class="icon"><svg><use href="#i-leaf"/></svg></span><b>Carbon Reduction</b><p>Direction toward more responsible operations.</p></div><div class="pillar"><span class="icon"><svg><use href="#i-check"/></svg></span><b>Ethical Sourcing</b><p>Quality growth aligned with accountable sourcing.</p></div></div></section>
+
+<section class="page light"><div class="num">11</div><div class="inner"><div class="eyebrow">Customization Matrix</div><h2 class="h2" style="margin-top:25px;max-width:690px">Customized specifications around customer requirements.</h2><p class="lead">A practical matrix for product development, production planning and brand specification.</p></div><div class="matrix"><div class="mrow"><b>Cut Size</b><span>Customized</span></div><div class="mrow"><b>Moisture</b><span>Customized</span></div><div class="mrow"><b>Steam Sterilization</b><span>Optional</span></div><div class="mrow"><b>Packaging</b><span>Customized</span></div><div class="mrow"><b>Label Design</b><span>Customized</span></div><div class="mrow"><b>Shelf Life</b><span>Customized</span></div></div></section>
+
+<section class="page pack dark"><div class="num">12</div><div class="bg shadeBottom"></div><div class="inner"><div class="eyebrow">Packaging Innovation Center</div><h2 class="h2" style="max-width:700px;margin-top:24px">Packaging solutions for market readiness.</h2></div><div class="packLine"><div class="packCard"><span class="icon"><svg><use href="#i-leaf"/></svg></span><b>Recyclable Packaging</b><p>Packaging options aligned with modern retail requirements.</p></div><div class="packCard"><span class="icon"><svg><use href="#i-shield"/></svg></span><b>Eco Packaging</b><p>More responsible material direction for brand owners.</p></div><div class="packCard"><span class="icon"><svg><use href="#i-retail"/></svg></span><b>Retail Packaging</b><p>Consumer-ready formats for shelf presentation.</p></div><div class="packCard"><span class="icon"><svg><use href="#i-horeca"/></svg></span><b>Food Service Packaging</b><p>Functional formats for horeca and professional kitchens.</p></div></div></section>
+
+<section class="page light processPage"><div class="num">13</div><div class="inner"><div class="eyebrow">Private Label Development Process</div><h2 class="h2" style="margin-top:25px;max-width:720px">From idea to shipment.</h2><p class="lead">A structured private label development process from product concept through manufacturing quality assurance.</p></div><div class="processMagazine"><div class="processLead"><span>Private Label</span><b>Development journey</b></div><div class="processColumn"><div class="processStep"><em>01</em><b>Idea</b><p>Opportunity definition</p></div><div class="processStep"><em>02</em><b>Formulation</b><p>Product profile creation</p></div><div class="processStep"><em>03</em><b>Sample</b><p>Prototype and review</p></div><div class="processStep"><em>04</em><b>Regulatory</b><p>Market requirement check</p></div><div class="processStep"><em>05</em><b>Design</b><p>Label and pack direction</p></div><div class="processStep"><em>06</em><b>Production</b><p>Manufacturing execution</p></div><div class="processStep"><em>07</em><b>QA</b><p>Quality confirmation</p></div><div class="processStep"><em>08</em><b>Shipment</b><p>Delivery coordination</p></div></div></div></section><section class="page risk dark"><div class="num">14</div><div class="bg shadeBottom"></div><div class="inner"><div class="eyebrow">Risk Management & Supply Security</div><h2 class="h2" style="max-width:710px;margin-top:24px">Supply security for reliable partnership.</h2></div><div class="riskGrid"><div class="riskCard"><span class="icon"><svg><use href="#i-globe"/></svg></span><b>Multiple sourcing regions.</b></div><div class="riskCard"><span class="icon"><svg><use href="#i-shield"/></svg></span><b>Business continuity plans.</b></div><div class="riskCard"><span class="icon"><svg><use href="#i-data"/></svg></span><b>Inventory management.</b></div><div class="riskCard"><span class="icon"><svg><use href="#i-check"/></svg></span><b>Quality risk assessment.</b></div><div class="riskCard"><span class="icon"><svg><use href="#i-lock"/></svg></span><b>Food defense & food fraud prevention.</b></div></div></section>
+
+<section class="page conf dark"><div class="num">15</div><div class="bg shadeBottom"></div><div class="inner"><div class="eyebrow">Confidentiality & IP Protection</div><h2 class="h2" style="max-width:720px;margin-top:24px">Protection for customer ideas, recipes and data.</h2></div><div class="secureGrid"><div class="secure"><span class="icon"><svg><use href="#i-lock"/></svg></span><b>NDA Policy</b><span>Formal confidentiality discipline.</span></div><div class="secure"><span class="icon"><svg><use href="#i-shield"/></svg></span><b>Recipe Protection</b><span>Controlled handling of formulations.</span></div><div class="secure"><span class="icon"><svg><use href="#i-bulb"/></svg></span><b>Exclusive Products</b><span>Respecting customer-specific development.</span></div><div class="secure"><span class="icon"><svg><use href="#i-data"/></svg></span><b>Data Security</b><span>Information kept with restricted access.</span></div></div></section>
+
+<section class="page light"><div class="num">16</div><div class="inner"><div class="eyebrow">Customer Success Stories</div><h2 class="h2" style="margin-top:25px;max-width:690px">Trusted by brands. Proven by performance.</h2></div><div class="stats"><div class="stat"><strong>20+</strong><span>Private Label Brands Successfully Developed</span></div><div class="stat"><strong>20+</strong><span>Countries Served Across North America, Europe, Asia and the Middle East</span></div><div class="stat"><strong>95%+</strong><span>Customer Retention Rate Built on Long-Term Partnerships and Trust</span></div><div class="stat"><strong>Millions</strong><span>Consumer Packs Produced and Delivered Worldwide Every Year</span></div></div><div class="successText"><b>TRUSTED BY BRANDS.<br>PROVEN BY PERFORMANCE.</b><p class="body">Every number represents a partnership, a commitment fulfilled, and a shared success story. At PTEXIM, we measure our achievements not only by volumes and destinations, but by the trust our customers place in us and the value we help create for their brands.</p></div></section>
+
+<section class="page light" style="background:var(--cream)"><div class="num">17</div><div class="inner"><div class="eyebrow">The PTEXIM Difference</div><h2 class="h2" style="margin-top:25px;max-width:760px">More Than a Manufacturer. A Trusted Partner for Growth.</h2></div><div class="diffGrid"><div class="diff"><span class="icon"><svg><use href="#i-bulb"/></svg></span><div><b>Innovation</b><p>Transforming market insights into differentiated products and tailored solutions.</p></div></div><div class="diff"><span class="icon"><svg><use href="#i-lab"/></svg></span><div><b>Quality Excellence</b><p>Delivering consistent quality through rigorous standards, advanced laboratory capabilities, and uncompromising attention to detail.</p></div></div><div class="diff"><span class="icon"><svg><use href="#i-globe"/></svg></span><div><b>Global Compliance</b><p>Navigating complex international requirements with confidence, transparency, and full regulatory expertise.</p></div></div><div class="diff"><span class="icon"><svg><use href="#i-hand"/></svg></span><div><b>Partnership</b><p>Building long-term relationships founded on trust, collaboration, and shared success.</p></div></div></div><p class="body" style="position:absolute;left:20mm;right:20mm;bottom:55mm">We combine Vietnam’s finest spices and herbs with innovation, scientific expertise, and a deep understanding of global markets. From concept development and product formulation to manufacturing and delivery, we work alongside our customers to create products that inspire consumers and build enduring brands. At PTEXIM, our success is measured not only by the products we deliver, but by the partnerships we help grow and the value we create together.</p><div class="callout">PTEXIM — Your Trusted Partner in Creating the Next Generation of Spice and Herb Brands.</div></section>
+
+<section class="page dark innovationPage"><div class="num">18</div><div class="bg shadeBottom" style="background-image:url('assets/innovation.jpg')"></div><div class="inner"><div class="eyebrow">Innovation Pipeline</div><h2 class="h2" style="max-width:760px;margin-top:24px">Creating value through innovation, science, and trusted partnerships.</h2></div><div class="pipelineBars"><div class="barStep"><em>01</em><div><b>Market Trend</b><p>Identify the direction of demand.</p></div></div><div class="barStep"><em>02</em><div><b>Consumer Insight</b><p>Translate needs into product opportunities.</p></div></div><div class="barStep"><em>03</em><div><b>R&amp;D Development</b><p>Develop prototypes through formulation expertise.</p></div></div><div class="barStep"><em>04</em><div><b>Prototype</b><p>Review and refine product performance.</p></div></div><div class="barStep"><em>05</em><div><b>Commercial Launch</b><p>Move from approved concept to market execution.</p></div></div></div></section><section class="page contactFinal light">
+    <div class="num">19</div>
+    <div class="contactHero"></div>
+    <div class="contactContent">
+        <div class="contactMain">
+            <div class="qr" aria-label="QR code"></div>
+            <div class="contactCopy">
+                <div class="contactLabel">Contact</div>
+                <h2>PTEXIM Corporation</h2>
+                <p>From sourcing and processing to regulatory readiness, PTEXIM supports partners with reliable quality, transparent standards and scalable manufacturing capability.</p>
+            </div>
+            <div class="contactMeta">
+                <div class="metaRow"><b>Factory</b><span>Vietnam manufacturing facility</span></div>
+                <div class="metaRow"><b>Focus</b><span>Private label spice and herb solutions for global buyers, food service and industrial ingredient customers.</span></div>
+            </div>
+        </div>
+        <div class="certBlock">
+            <div class="certHead"><b>Trusted Certifications</b><span></span></div>
+            <div class="certGrid">
+                <div class="certItem"><img src="assets/certs/eu-organic.png" alt="EU Organic"></div>
+                <div class="certItem"><img src="assets/certs/fda.webp" alt="FDA"></div>
+                <div class="certItem"><img src="assets/certs/plma.png" alt="PLMA"></div>
+                <div class="certItem"><img src="assets/certs/uebt.webp" alt="UEBT"></div>
+                <div class="certItem"><img src="assets/certs/brcgs.png" alt="BRCGS"></div>
+                <div class="certItem"><img src="assets/certs/kosher.png" alt="Kosher"></div>
+                <div class="certItem"><img src="assets/certs/halal.png" alt="Halal"></div>
+                <div class="certItem"><img src="assets/certs/usda-organic.webp" alt="USDA Organic"></div>
+                <div class="certItem"><img src="assets/certs/rainforest.png" alt="Rainforest Alliance"></div>
+                <div class="certItem"><img src="assets/certs/sedex.png" alt="Sedex"></div>
+                <div class="certItem"><img src="assets/certs/iso22000.png" alt="ISO 22000"></div>
+                <div class="certItem"><img src="assets/certs/gmp.png" alt="GMP"></div>
+            </div>
+        </div>
+        <div class="closingLine">PTEXIM — Building Brands Through Nature’s Finest Ingredients.</div>
+    </div>
+</section>
+
+</div></body></html>

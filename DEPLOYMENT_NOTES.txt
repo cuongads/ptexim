@@ -1,0 +1,37 @@
+PTEXIM GitHub Pages deployment notes
+
+Upload index.html together with the existing assets/ folder.
+
+Required asset paths referenced by index.html:
+- assets/applications.jpg
+- assets/ceo.jpg
+- assets/certs/brcgs.png
+- assets/certs/eu-organic.png
+- assets/certs/fda.webp
+- assets/certs/gmp.png
+- assets/certs/halal.png
+- assets/certs/iso22000.png
+- assets/certs/kosher.png
+- assets/certs/plma.png
+- assets/certs/rainforest.png
+- assets/certs/sedex.png
+- assets/certs/uebt.webp
+- assets/certs/usda-organic.webp
+- assets/confidential.jpg
+- assets/contact-factory.png
+- assets/contact-page.png
+- assets/contact.jpg
+- assets/cover.jpg
+- assets/factory/bmt1.jpg
+- assets/innovation.jpg
+- assets/lab.jpg
+- assets/packaging.jpg
+- assets/private.jpg
+- assets/ptexim-corp-logo.png
+- assets/regulatory_compliance_map.png
+- assets/regulatory_map_clean.jpg
+- assets/regulatory_map_reference.png
+- assets/risk.jpg
+- assets/sustain.jpg
+
+This build keeps fixed A4 pages across browsers to avoid layout reflow on Windows/macOS/Linux.
