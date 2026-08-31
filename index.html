@@ -23,18 +23,23 @@
   .toolbar{height:58px;display:flex;align-items:center;justify-content:center;gap:18px;padding:0 18px 12px;color:#ddd;font-size:12px;letter-spacing:.03em;z-index:40}
   .counter{min-width:92px;text-align:center;color:#aaa;font-variant-numeric:tabular-nums}
   .tool{border:0;background:transparent;color:#bcbcbc;width:36px;height:36px;border-radius:999px;display:grid;place-items:center;cursor:pointer;transition:.18s}.tool:hover{background:rgba(255,255,255,.07);color:white}.tool svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+  .zoom-level{min-width:42px;text-align:center;color:#888;font-size:10px;font-variant-numeric:tabular-nums;cursor:pointer}
+  #book{transform-origin:center center;will-change:transform}
+  .book-wrap.is-zoomed{cursor:grab}
+  .book-wrap.is-panning{cursor:grabbing}
   .hint{position:absolute;left:50%;top:18px;transform:translateX(-50%);color:rgba(255,255,255,.42);font-size:11px;letter-spacing:.08em;text-transform:uppercase;pointer-events:none;transition:opacity .5s}
   .loading{position:fixed;inset:0;display:grid;place-items:center;background:#111;z-index:999;transition:opacity .35s,visibility .35s}.loading.hide{opacity:0;visibility:hidden}.spinner{width:26px;height:26px;border-radius:50%;border:2px solid #333;border-top-color:#aaa;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
   .error{position:fixed;inset:0;display:none;place-items:center;text-align:center;padding:30px;color:#bbb;background:#111;z-index:1000;line-height:1.6}.error b{color:#fff}
   @media(max-width:800px){
   .stage{padding:12px 4px 4px;align-items:center}
-  .book-wrap{width:100vw;height:calc(100vh - 64px);max-width:none;max-height:none;overflow:hidden}
+  .book-wrap{width:100vw;height:calc(100vh - 64px);max-width:none;max-height:none;overflow:hidden;touch-action:none}
   #book{margin:auto}
   .nav{display:none}
-  .toolbar{height:52px;padding:0 6px 8px;gap:8px}
+  .toolbar{height:52px;padding:0 4px 8px;gap:5px}
   .hint{top:7px;font-size:9px}
   .counter{min-width:76px}
-  .tool{width:31px;height:31px}
+  .tool{width:29px;height:29px}
+  .zoom-level{min-width:34px;font-size:9px}
 }
 </style>
 </head>
@@ -52,6 +57,9 @@
     <div class="counter" id="counter">01 / 34</div>
     <button class="tool" id="forward" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
     <button class="tool" id="last" aria-label="Last page"><svg viewBox="0 0 24 24"><path d="M18 5v14M6 5l7 7-7 7"/></svg></button>
+    <button class="tool" id="zoomOut" aria-label="Zoom out"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M8 11h6M16 16l4 4"/></svg></button>
+    <div class="zoom-level" id="zoomLevel" title="Tap to reset zoom">100%</div>
+    <button class="tool" id="zoomIn" aria-label="Zoom in"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M8 11h6M11 8v6M16 16l4 4"/></svg></button>
     <button class="tool" id="fullscreen" aria-label="Fullscreen"><svg viewBox="0 0 24 24"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5"/></svg></button>
   </footer>
 </div>
@@ -106,6 +114,89 @@
   if(isMobile){
     window.addEventListener('orientationchange',()=>setTimeout(()=>location.reload(),150));
   }
+
+
+  // Zoom & pan
+  const bookWrap=document.querySelector('.book-wrap');
+  const zoomInBtn=document.getElementById('zoomIn');
+  const zoomOutBtn=document.getElementById('zoomOut');
+  const zoomLevelEl=document.getElementById('zoomLevel');
+  const MIN_ZOOM=1, MAX_ZOOM=3, ZOOM_STEP=.25;
+  let zoom=1, panX=0, panY=0;
+  let pinchStartDistance=0, pinchStartZoom=1;
+  let panStartX=0, panStartY=0, panOriginX=0, panOriginY=0;
+  let isPanning=false;
+
+  const clamp=(v,min,max)=>Math.min(max,Math.max(min,v));
+
+  function applyZoom(){
+    if(zoom<=1.001){ zoom=1; panX=0; panY=0; }
+    book.style.transform=`translate(${panX}px,${panY}px) scale(${zoom})`;
+    bookWrap.classList.toggle('is-zoomed',zoom>1);
+    zoomLevelEl.textContent=`${Math.round(zoom*100)}%`;
+    zoomOutBtn.disabled=zoom<=MIN_ZOOM;
+    zoomInBtn.disabled=zoom>=MAX_ZOOM;
+  }
+
+  function setZoom(next){
+    zoom=clamp(Math.round(next*100)/100,MIN_ZOOM,MAX_ZOOM);
+    applyZoom();
+  }
+
+  zoomInBtn.onclick=()=>setZoom(zoom+ZOOM_STEP);
+  zoomOutBtn.onclick=()=>setZoom(zoom-ZOOM_STEP);
+  zoomLevelEl.onclick=()=>setZoom(1);
+
+  function touchDistance(t1,t2){
+    return Math.hypot(t2.clientX-t1.clientX,t2.clientY-t1.clientY);
+  }
+
+  bookWrap.addEventListener('touchstart',e=>{
+    if(e.touches.length===2){
+      e.preventDefault();
+      e.stopPropagation();
+      pinchStartDistance=touchDistance(e.touches[0],e.touches[1]);
+      pinchStartZoom=zoom;
+      isPanning=false;
+    } else if(e.touches.length===1 && zoom>1){
+      e.preventDefault();
+      e.stopPropagation();
+      isPanning=true;
+      bookWrap.classList.add('is-panning');
+      panStartX=e.touches[0].clientX;
+      panStartY=e.touches[0].clientY;
+      panOriginX=panX;
+      panOriginY=panY;
+    }
+  },{passive:false,capture:true});
+
+  bookWrap.addEventListener('touchmove',e=>{
+    if(e.touches.length===2){
+      e.preventDefault();
+      e.stopPropagation();
+      const d=touchDistance(e.touches[0],e.touches[1]);
+      if(pinchStartDistance){
+        zoom=clamp(pinchStartZoom*(d/pinchStartDistance),MIN_ZOOM,MAX_ZOOM);
+        applyZoom();
+      }
+    } else if(e.touches.length===1 && zoom>1 && isPanning){
+      e.preventDefault();
+      e.stopPropagation();
+      panX=panOriginX+(e.touches[0].clientX-panStartX);
+      panY=panOriginY+(e.touches[0].clientY-panStartY);
+      applyZoom();
+    }
+  },{passive:false,capture:true});
+
+  bookWrap.addEventListener('touchend',e=>{
+    if(e.touches.length<2) pinchStartDistance=0;
+    if(e.touches.length===0){
+      isPanning=false;
+      bookWrap.classList.remove('is-panning');
+    }
+  },{passive:false,capture:true});
+
+  applyZoom();
 
   const counter=document.getElementById('counter');
   const prev=document.getElementById('prev'), next=document.getElementById('next');
