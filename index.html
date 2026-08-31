@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>PTEXIM Brochure</title>
 <meta name="theme-color" content="#111111" />
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
 <style>
   :root{--bg:#111;--fg:#f2f2f2;--muted:#8c8c8c;--panel:rgba(20,20,20,.78)}
   *{box-sizing:border-box} html,body{width:100%;height:100%;margin:0;background:var(--bg);color:var(--fg);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow:hidden}
@@ -23,7 +26,16 @@
   .hint{position:absolute;left:50%;top:18px;transform:translateX(-50%);color:rgba(255,255,255,.42);font-size:11px;letter-spacing:.08em;text-transform:uppercase;pointer-events:none;transition:opacity .5s}
   .loading{position:fixed;inset:0;display:grid;place-items:center;background:#111;z-index:999;transition:opacity .35s,visibility .35s}.loading.hide{opacity:0;visibility:hidden}.spinner{width:26px;height:26px;border-radius:50%;border:2px solid #333;border-top-color:#aaa;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
   .error{position:fixed;inset:0;display:none;place-items:center;text-align:center;padding:30px;color:#bbb;background:#111;z-index:1000;line-height:1.6}.error b{color:#fff}
-  @media(max-width:800px){.stage{padding:20px 10px 6px}.book-wrap{width:96vw;height:84vh}.nav{display:none}.toolbar{height:52px;padding-bottom:8px}.hint{top:10px}.counter{min-width:84px}}
+  @media(max-width:800px){
+  .stage{padding:12px 4px 4px;align-items:center}
+  .book-wrap{width:100vw;height:calc(100vh - 64px);max-width:none;max-height:none;overflow:hidden}
+  #book{margin:auto}
+  .nav{display:none}
+  .toolbar{height:52px;padding:0 6px 8px;gap:8px}
+  .hint{top:7px;font-size:9px}
+  .counter{min-width:76px}
+  .tool{width:31px;height:31px}
+}
 </style>
 </head>
 <body>
@@ -37,7 +49,7 @@
   <footer class="toolbar">
     <button class="tool" id="first" aria-label="First page"><svg viewBox="0 0 24 24"><path d="M6 5v14M18 5l-7 7 7 7"/></svg></button>
     <button class="tool" id="back" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
-    <div class="counter" id="counter">01 / 38</div>
+    <div class="counter" id="counter">01 / 34</div>
     <button class="tool" id="forward" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
     <button class="tool" id="last" aria-label="Last page"><svg viewBox="0 0 24 24"><path d="M18 5v14M6 5l7 7-7 7"/></svg></button>
     <button class="tool" id="fullscreen" aria-label="Fullscreen"><svg viewBox="0 0 24 24"><path d="M8 3H3v5M16 3h5v5M8 21H3v-5M16 21h5v-5"/></svg></button>
@@ -48,7 +60,7 @@
 <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
 <script>
 (() => {
-  const TOTAL=38;
+  const TOTAL=34;
   const loading=document.getElementById('loading');
   const error=document.getElementById('error');
   if(!window.St || !St.PageFlip){ loading.classList.add('hide'); error.style.display='grid'; return; }
@@ -63,12 +75,37 @@
     page.appendChild(img); book.appendChild(page);
   }
 
-  const pf=new St.PageFlip(book,{
+  const isMobile=window.matchMedia('(max-width:800px)').matches;
+  const PAGE_RATIO=990/700;
+  const mobilePageWidth=Math.max(110,Math.floor((window.innerWidth-12)/2));
+  const mobilePageHeight=Math.round(mobilePageWidth*PAGE_RATIO);
+
+  const pf=new St.PageFlip(book,isMobile ? {
+    width:mobilePageWidth,
+    height:mobilePageHeight,
+    size:'fixed',
+    maxShadowOpacity:.42,
+    showCover:true,
+    mobileScrollSupport:false,
+    usePortrait:false,
+    autoSize:false,
+    drawShadow:true,
+    flippingTime:820,
+    startZIndex:0,
+    showPageCorners:true,
+    disableFlipByClick:false
+  } : {
     width:700,height:990,size:'stretch',minWidth:300,maxWidth:700,minHeight:424,maxHeight:990,
-    maxShadowOpacity:.42,showCover:true,mobileScrollSupport:false,usePortrait:true,autoSize:true,
+    maxShadowOpacity:.42,showCover:true,mobileScrollSupport:false,usePortrait:false,autoSize:true,
     drawShadow:true,flippingTime:820,startZIndex:0,showPageCorners:true,disableFlipByClick:false
   });
   pf.loadFromHTML(document.querySelectorAll('.page'));
+
+  // Keep a true two-page spread on mobile. Rebuild on orientation change so
+  // the fixed page size is recalculated for the new viewport width.
+  if(isMobile){
+    window.addEventListener('orientationchange',()=>setTimeout(()=>location.reload(),150));
+  }
 
   const counter=document.getElementById('counter');
   const prev=document.getElementById('prev'), next=document.getElementById('next');
